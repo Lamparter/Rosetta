@@ -95,3 +95,5 @@ Its base is in XML with a custom namespace schema that allows for developing bas
 
 Rosetta and its syntax is derived from XML and inspired by XAML markup. It follows all the rules of XML.
 The root schema and its extensions are documented in this repository. This repository also provides tools for creating and distributing your own Rosetta extensions for building text elements that aren't already included in the BCL.
+
+The BCL (`Riverside.Markup`) contains primitive classes that can be inherited for basic text abstraction, including paragraphs, headers, styling and text itself. The BCL also contains extensions that are not required to use Rosetta but contain text functions that are generally useful, such as `Riverside.Markup.Typefaces` which allows for use of fonts and `Riverside.Markup.Formatting` which gives basic Markdown-inspired rich test functionality.
