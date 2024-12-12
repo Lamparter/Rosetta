@@ -88,3 +88,10 @@ Its base is in XML with a custom namespace schema that allows for developing bas
     <Paragraph>
 </Document>
 ```
+
+---
+
+## ✍️ Specification
+
+Rosetta and its syntax is derived from XML and inspired by XAML markup. It follows all the rules of XML.
+The root schema and its extensions are documented in this repository. This repository also provides tools for creating and distributing your own Rosetta extensions for building text elements that aren't already included in the BCL.
