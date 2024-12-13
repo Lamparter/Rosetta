@@ -1,5 +1,7 @@
 > [!CAUTION]
 > This project is a work in progress.
+>
+> If you want to learn more about the development journey, please join the [Developer Sanctuary](https://dsc.gg/devsanx) or [Ivirius Community](https://dsc.gg/ivirius) Discord servers to see the project in active development.
 
 # 🪨 Rosetta
 
