@@ -15,7 +15,7 @@ public class MarkdownParser
     /// </summary>
     /// <param name="tokens">The list of Markdown tokens to parse.</param>
     /// <returns>A list of Markdown nodes.</returns>
-    public List<MarkdownNode> Parse(List<MarkdownToken> tokens)
+    public static List<MarkdownNode> Parse(List<MarkdownToken> tokens)
     {
         var nodes = new List<MarkdownNode>();
 

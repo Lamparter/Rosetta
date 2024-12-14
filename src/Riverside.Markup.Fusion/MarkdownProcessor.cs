@@ -10,9 +10,6 @@ namespace Riverside.Markup.Fusion
     /// <param name="standard">The Markdown standard to use.</param>
     public class MarkdownProcessor(MarkdownStandard standard)
     {
-        private readonly MarkdownLexer _lexer = new();
-        private readonly MarkdownParser _parser = new();
-        private readonly HtmlRenderer _renderer = new();
         private readonly MarkdownStandard _standard = standard;
 
         /// <summary>
@@ -22,9 +19,9 @@ namespace Riverside.Markup.Fusion
         /// <returns>The HTML representation of the Markdown content.</returns>
         public string ConvertMarkdownToHtml(string markdown)
         {
-            var tokens = _lexer.Lex(markdown);
-            var ast = _parser.Parse(tokens);
-            return _renderer.Render(ast, _standard);
+            var tokens = MarkdownLexer.Lex(markdown);
+            var ast = MarkdownParser.Parse(tokens);
+            return HtmlRenderer.Render(ast, _standard);
         }
     }
 }

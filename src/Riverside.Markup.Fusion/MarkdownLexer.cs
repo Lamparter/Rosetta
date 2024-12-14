@@ -15,7 +15,7 @@ namespace Riverside.Markup.Fusion
         /// </summary>  
         /// <param name="markdown">The Markdown content to tokenize.</param>  
         /// <returns>A list of Markdown tokens.</returns>  
-        public List<MarkdownToken> Lex(string markdown) // I wanted to call this "MarkdownTokeniser" but a certain group of people wouldn't like it... :D Though for some reason Lexer isn't recognised as a word by the spell checker either...
+        public static List<MarkdownToken> Lex(string markdown) // I wanted to call this "MarkdownTokeniser" but a certain group of people wouldn't like it... :D Though for some reason Lexer isn't recognised as a word by the spell checker either...
         {
             var tokens = new List<MarkdownToken>();
             var lines = markdown.Split('\n');

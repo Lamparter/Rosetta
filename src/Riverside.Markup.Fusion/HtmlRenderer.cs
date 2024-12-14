@@ -15,7 +15,7 @@ namespace Riverside.Markup.Fusion
         /// <param name="nodes">The collection of Markdown nodes to render.</param>
         /// <param name="standard">The Markdown standard to use.</param>
         /// <returns>The HTML representation of the Markdown nodes.</returns>
-        public string Render(IEnumerable<MarkdownNode> nodes, MarkdownStandard standard)
+        public static string Render(IEnumerable<MarkdownNode> nodes, MarkdownStandard standard)
         {
             var sb = new StringBuilder();
             foreach (var node in nodes)
