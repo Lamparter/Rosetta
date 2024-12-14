@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MajorVersion>0</MajorVersion>
+    <MinorVersion>4</MinorVersion>
+    <MicroVersion>1</MicroVersion>
+    <ReleaseLevel>alpha</ReleaseLevel>
+
+    <BetaVersion Condition="'$(ReleaseLevel)' !='final'">1</BetaVersion>
+  </PropertyGroup>
+</Project>

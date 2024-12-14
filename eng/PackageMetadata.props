@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>    
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(Product)</Title>
+    <Authors>Riverside, Lamparter</Authors>
+    <Copyright>Copyright (c) 2024 Riverside Valley Corporation</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Lamparter/Rosetta</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>rosetta; language; docx; wordprocessing; word; rtf; compiler; xml; riverside</PackageTags>
+    <Description>The Rosetta .NET compiler provides document format languages with rich code analysis APIs.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(BuildDirectory)\PackageLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(BuildDirectory)\nuget\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="$(BuildDirectory)\PackageLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
