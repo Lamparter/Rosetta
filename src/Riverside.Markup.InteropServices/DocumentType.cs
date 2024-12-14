@@ -7,7 +7,7 @@ namespace Riverside.Markup.InteropServices
     /// <summary>
     /// This enumeration defines the different types of documents that can be translated into Rosetta.
     /// </summary>
-    public enum DocumentTypes
+    public enum DocumentType
     {
         /// <summary>
         /// HyperText Markup Language document.
