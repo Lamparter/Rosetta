@@ -7,21 +7,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Processes Markdown content and converts it to HTML.
     /// </summary>
-    public class MarkdownProcessor
+    /// <param name="standard">The Markdown standard to use.</param>
+    public class MarkdownProcessor(MarkdownStandard standard)
     {
-        private readonly MarkdownLexer _lexer = new MarkdownLexer();
-        private readonly MarkdownParser _parser = new MarkdownParser();
-        private readonly HtmlRenderer _renderer = new HtmlRenderer();
-        private readonly MarkdownStandard _standard;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MarkdownProcessor"/> class with the specified Markdown standard.
-        /// </summary>
-        /// <param name="standard">The Markdown standard to use.</param>
-        public MarkdownProcessor(MarkdownStandard standard)
-        {
-            _standard = standard;
-        }
+        private readonly MarkdownLexer _lexer = new();
+        private readonly MarkdownParser _parser = new();
+        private readonly HtmlRenderer _renderer = new();
+        private readonly MarkdownStandard _standard = standard;
 
         /// <summary>
         /// Converts the specified Markdown content to HTML.
