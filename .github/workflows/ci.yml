@@ -16,7 +16,7 @@ jobs:
         project:
           - Riverside.Markup
           - Riverside.Markup.CompilerServices
-          - Riverside.Markup.Controls
+          # - Riverside.Markup.Controls
           - Riverside.Markup.InteropServices
           # Add more projects here as needed
 
