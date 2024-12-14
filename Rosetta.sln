@@ -8,10 +8,24 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Markup.Specification", "src\Riverside.Markup.Specification\Riverside.Markup.Specification.csproj", "{8643A589-2FAB-4B8F-9ACB-3A8AC5582223}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}"
+	ProjectSection(SolutionItems) = preProject
+		src\README.md = src\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eng", "eng", "{72F34633-3DF1-47B2-84F5-D260450A9010}"
+	ProjectSection(SolutionItems) = preProject
+		eng\README.md = eng\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9CB3627B-A463-4DED-B4D0-D185E13DBCF6}"
+	ProjectSection(SolutionItems) = preProject
+		tests\README.md = tests\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{AE9209B1-AB3C-4451-BFAD-8C3F089E104F}"
+	ProjectSection(SolutionItems) = preProject
+		.github\README.md = .github\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
