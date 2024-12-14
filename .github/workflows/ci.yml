@@ -9,16 +9,18 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: matrix.os
 
     strategy:
       matrix:
         project:
           - Riverside.Markup
           - Riverside.Markup.CompilerServices
-          # - Riverside.Markup.Controls
           - Riverside.Markup.InteropServices
           # Add more projects here as needed
+        windows_project:
+          - Riverside.Markup.Controls
+        os: [windows-latest, ubuntu-latest, macos-latest]
 
     outputs:
       normalized_name: ${{ steps.normalize_name.outputs.normalized_name }}
@@ -38,8 +40,16 @@ jobs:
       - name: Build project
         run: dotnet build src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-restore
 
+      - name: Build project (Windows)
+        if: matrix.os == 'windows-latest'
+        run: dotnet build src/${{ matrix.windows_project }}/${{ matrix.windows_project }}.csproj --configuration Release --no-restore
+
       - name: Pack project
         run: dotnet pack src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-build -o ./output
+
+      - name: Pack project (Windows)
+        if: matrix.os == 'windows-latest'
+        run: dotnet pack src/${{ matrix.windows_project }}/${{ matrix.windows_project }}.csproj --configuration Release --no-build -o ./output
 
       - name: Normalize project name
         id: normalize_name
