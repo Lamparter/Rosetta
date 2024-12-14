@@ -5,8 +5,16 @@ using System.Linq;
 
 namespace Riverside.Markup.Fusion;
 
+/// <summary>
+/// Parses a list of Markdown tokens into a list of Markdown nodes.
+/// </summary>
 public class MarkdownParser
 {
+    /// <summary>
+    /// Parses the specified list of Markdown tokens into a list of Markdown nodes.
+    /// </summary>
+    /// <param name="tokens">The list of Markdown tokens to parse.</param>
+    /// <returns>A list of Markdown nodes.</returns>
     public List<MarkdownNode> Parse(List<MarkdownToken> tokens)
     {
         var nodes = new List<MarkdownNode>();

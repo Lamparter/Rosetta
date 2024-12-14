@@ -1,13 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Riverside.Markup.Fusion
 {
-    public class MarkdownLexer // I wanted to call this "MarkdownTokeniser" but a certain group of people wouldn't like it... :D Though for some reason Lexer isn't recognised as a word by the spell checker either...
+    /// <summary>  
+    /// Tokenizes Markdown content into a list of Markdown tokens.  
+    /// </summary>  
+    public class MarkdownLexer
     {
-        public List<MarkdownToken> Lex(string markdown)
+        /// <summary>  
+        /// Tokenizes the specified Markdown content.  
+        /// </summary>  
+        /// <param name="markdown">The Markdown content to tokenize.</param>  
+        /// <returns>A list of Markdown tokens.</returns>  
+        public List<MarkdownToken> Lex(string markdown) // I wanted to call this "MarkdownTokeniser" but a certain group of people wouldn't like it... :D Though for some reason Lexer isn't recognised as a word by the spell checker either...
         {
             var tokens = new List<MarkdownToken>();
             var lines = markdown.Split('\n');
