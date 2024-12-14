@@ -1,0 +1,45 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="Riverside.Markup.Fonts"
+           elementFormDefault="qualified">
+
+	<xs:simpleType name="FontType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Arial"/>
+			<xs:enumeration value="Arial Black"/>
+			<xs:enumeration value="Verdana"/>
+			<xs:enumeration value="Trebuchet"/>
+			<xs:enumeration value="Helvetica"/>
+			<xs:enumeration value="Times New Roman"/>
+			<xs:enumeration value="Georgia"/>
+			<xs:enumeration value="Palatino"/>
+			<xs:enumeration value="Garamond"/>
+			<xs:enumeration value="Bookman"/>
+			<xs:enumeration value="Comic Sans MS"/>
+			<xs:enumeration value="Impact"/>
+			<xs:enumeration value="Courier New"/>
+			<xs:enumeration value="Lucida Console"/>
+			<xs:enumeration value="Lucida Sans Unicode"/>
+			<xs:enumeration value="Tahoma"/>
+			<xs:enumeration value="Century Gothic"/>
+			<xs:enumeration value="Candara"/>
+			<xs:enumeration value="Arial Narrow"/>
+			<xs:enumeration value="Arial Rounded MT Bold"/>
+			<xs:enumeration value="Century Schoolbook"/>
+			<xs:enumeration value="Copperplate"/>
+			<xs:enumeration value="Gill Sans"/>
+			<xs:enumeration value="Harrington"/>
+			<xs:enumeration value="Monaco"/>
+			<xs:enumeration value="Optima"/>
+			<xs:enumeration value="Perpetua"/>
+			<xs:enumeration value="Rockwell"/>
+			<xs:enumeration value="Segoe UI"/>
+			<xs:enumeration value="Segoe Script"/>
+			<xs:enumeration value="Segoe Print"/>
+			<xs:enumeration value="Sylfaen"/>
+			<xs:enumeration value="Times"/>
+			<xs:enumeration value="Verdana"/>
+			<xs:enumeration value="Zapfino"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
