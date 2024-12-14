@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E0EE792B-7CC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eng", "eng", "{72F34633-3DF1-47B2-84F5-D260450A9010}"
 	ProjectSection(SolutionItems) = preProject
+		eng\CurrentVersion.props = eng\CurrentVersion.props
+		Directory.Build.props = Directory.Build.props
+		eng\PackageLogo.png = eng\PackageLogo.png
+		eng\PackageMetadata.props = eng\PackageMetadata.props
 		eng\README.md = eng\README.md
 	EndProjectSection
 EndProject
@@ -24,7 +28,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9CB3627B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{AE9209B1-AB3C-4451-BFAD-8C3F089E104F}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
 		.github\README.md = .github\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{7B37BA78-9C3C-47BC-8D30-874290E9E859}"
+	ProjectSection(SolutionItems) = preProject
+		eng\nuget\README.md = eng\nuget\README.md
 	EndProjectSection
 EndProject
 Global
@@ -48,5 +59,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{41682338-C05B-46AD-809F-6472BEF3E6DA} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
 		{8643A589-2FAB-4B8F-9ACB-3A8AC5582223} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
+		{7B37BA78-9C3C-47BC-8D30-874290E9E859} = {72F34633-3DF1-47B2-84F5-D260450A9010}
 	EndGlobalSection
 EndGlobal
