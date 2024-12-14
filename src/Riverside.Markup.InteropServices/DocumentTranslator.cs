@@ -22,17 +22,13 @@ namespace Riverside.Markup.InteropServices
         /// <exception cref="NotSupportedException">Thrown when the specified document type is not supported.</exception>
         public XmlDocument ConvertToRosetta(string input, DocumentType documentType)
         {
-            switch (documentType)
+            return documentType switch
             {
-                case DocumentType.HyperText:
-                    return htmlPipe.ConvertToRosetta(input);
-                case DocumentType.RichText:
-                    return rtfPipe.ConvertToRosetta(input);
-                case DocumentType.ReStructuredText:
-                    return rstPipe.ConvertToRosetta(input);
-                default:
-                    throw new NotSupportedException($"Document type {documentType} is not supported.");
-            }
+                DocumentType.HyperText => htmlPipe.ConvertToRosetta(input),
+                DocumentType.RichText => rtfPipe.ConvertToRosetta(input),
+                DocumentType.ReStructuredText => rstPipe.ConvertToRosetta(input),
+                _ => throw new NotSupportedException($"Document type {documentType} is not supported."),
+            };
         }
     }
 }
