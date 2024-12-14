@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+          - Riverside.Markup
+          - Riverside.Markup.CompilerServices
+          - Riverside.Markup.Controls
+          - Riverside.Markup.InteropServices
+          # Add more projects here as needed
+
+    outputs:
+      normalized_name: ${{ steps.normalize_name.outputs.normalized_name }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restore dependencies
+        run: dotnet restore src/${{ matrix.project }}/${{ matrix.project }}.csproj
+
+      - name: Build project
+        run: dotnet build src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-restore
+
+      - name: Pack project
+        run: dotnet pack src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-build -o ./output
+
+      - name: Normalize project name
+        id: normalize_name
+        run: echo "normalized_name=$(echo src/${{ matrix.project }}/${{ matrix.project }} | tr '/' '-')" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Packages
+          path: ./output/*.nupkg
+        
