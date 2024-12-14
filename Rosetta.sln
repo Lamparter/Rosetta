@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Markup.InteropSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Markup.Controls", "src\Riverside.Markup.Controls\Riverside.Markup.Controls.csproj", "{59383DE0-1C77-4423-AA29-A97942A7F127}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riverside.Markup.Fusion", "src\Riverside.Markup.Fusion\Riverside.Markup.Fusion.csproj", "{49249818-C531-49B4-B3D4-C5A659C9B982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{59383DE0-1C77-4423-AA29-A97942A7F127}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59383DE0-1C77-4423-AA29-A97942A7F127}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59383DE0-1C77-4423-AA29-A97942A7F127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49249818-C531-49B4-B3D4-C5A659C9B982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49249818-C531-49B4-B3D4-C5A659C9B982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49249818-C531-49B4-B3D4-C5A659C9B982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49249818-C531-49B4-B3D4-C5A659C9B982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,5 +87,6 @@ Global
 		{83AB0ECD-E0FE-4B4D-B1B4-9CFABEAD0C82} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
 		{47893B27-A13B-4768-8B7D-8A0A2BB131B9} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
 		{59383DE0-1C77-4423-AA29-A97942A7F127} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
+		{49249818-C531-49B4-B3D4-C5A659C9B982} = {E0EE792B-7CCA-4369-9F40-3EF5FB00C3F9}
 	EndGlobalSection
 EndGlobal
