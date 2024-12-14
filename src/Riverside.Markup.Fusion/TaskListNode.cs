@@ -5,11 +5,27 @@ using System.Text.RegularExpressions;
 
 namespace Riverside.Markup.Fusion
 {
+    /// <summary>
+    /// Represents a task list node in Markdown.
+    /// </summary>
     public class TaskListNode : MarkdownNode
     {
+        /// <summary>
+        /// Gets the content of the task list node.
+        /// </summary>
         public string Content { get; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TaskListNode"/> class with the specified content.
+        /// </summary>
+        /// <param name="content">The content of the task list node.</param>
         public TaskListNode(string content) => Content = content;
 
+        /// <summary>
+        /// Converts the task list node to its HTML representation.
+        /// </summary>
+        /// <param name="standard">The Markdown standard to use.</param>
+        /// <returns>The HTML representation of the task list node.</returns>
         public override string ToHtml(MarkdownStandard standard)
         {
             var match = Regex.Match(Content, Patterns.TaskListPattern);

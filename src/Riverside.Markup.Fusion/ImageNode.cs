@@ -5,11 +5,27 @@ using System.Text.RegularExpressions;
 
 namespace Riverside.Markup.Fusion
 {
+    /// <summary>
+    /// Represents an image node in Markdown.
+    /// </summary>
     public class ImageNode : MarkdownNode
     {
+        /// <summary>
+        /// Gets the content of the image node.
+        /// </summary>
         public string Content { get; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ImageNode"/> class with the specified content.
+        /// </summary>
+        /// <param name="content">The content of the image node.</param>
         public ImageNode(string content) => Content = content;
 
+        /// <summary>
+        /// Converts the image node to its HTML representation.
+        /// </summary>
+        /// <param name="standard">The Markdown standard to use.</param>
+        /// <returns>The HTML representation of the image node.</returns>
         public override string ToHtml(MarkdownStandard standard)
         {
             var match = Regex.Match(Content, Patterns.ImagePattern);

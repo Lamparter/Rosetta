@@ -5,11 +5,27 @@ using System.Text;
 
 namespace Riverside.Markup.Fusion
 {
+    /// <summary>
+    /// Represents a table node in Markdown.
+    /// </summary>
     public class TableNode : MarkdownNode
     {
+        /// <summary>
+        /// Gets the content of the table node.
+        /// </summary>
         public string Content { get; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TableNode"/> class with the specified content.
+        /// </summary>
+        /// <param name="content">The content of the table node.</param>
         public TableNode(string content) => Content = content;
 
+        /// <summary>
+        /// Converts the table node to its HTML representation.
+        /// </summary>
+        /// <param name="standard">The Markdown standard to use.</param>
+        /// <returns>The HTML representation of the table node.</returns>
         public override string ToHtml(MarkdownStandard standard)
         {
             var htmlBuilder = new StringBuilder("<table><tbody>");
