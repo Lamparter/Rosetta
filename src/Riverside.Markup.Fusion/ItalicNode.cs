@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents an italic node in Markdown.
     /// </summary>
-    public class ItalicNode : MarkdownNode
+    /// <param name="content">The content of the italic node.</param>
+    public class ItalicNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the italic node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ItalicNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the italic node.</param>
-        public ItalicNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the italic node to its HTML representation.

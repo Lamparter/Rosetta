@@ -7,18 +7,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a text node in Markdown.
     /// </summary>
-    public class TextNode : MarkdownNode
+    /// <param name="content">The content of the text node.</param>
+    public class TextNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the text node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TextNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the text node.</param>
-        public TextNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the text node to its HTML representation.

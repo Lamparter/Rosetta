@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a table node in Markdown.
     /// </summary>
-    public class TableNode : MarkdownNode
+    /// <param name="content">The content of the table node.</param>
+    public class TableNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the table node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TableNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the table node.</param>
-        public TableNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the table node to its HTML representation.

@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a strikethrough node in Markdown.
     /// </summary>
-    public class StrikethroughNode : MarkdownNode
+    /// <param name="content">The content of the strikethrough node.</param>
+    public class StrikethroughNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the strikethrough node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StrikethroughNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the strikethrough node.</param>
-        public StrikethroughNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the strikethrough node to its HTML representation.

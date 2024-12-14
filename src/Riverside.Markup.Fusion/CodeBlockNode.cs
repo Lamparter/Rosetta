@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a code block node in Markdown.
     /// </summary>
-    public class CodeBlockNode : MarkdownNode
+    /// <param name="content">The content of the code block node.</param>
+    public class CodeBlockNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the code block node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CodeBlockNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the code block node.</param>
-        public CodeBlockNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the code block node to its HTML representation.

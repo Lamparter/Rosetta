@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents an image node in Markdown.
     /// </summary>
-    public class ImageNode : MarkdownNode
+    /// <param name="content">The content of the image node.</param>
+    public class ImageNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the image node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ImageNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the image node.</param>
-        public ImageNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the image node to its HTML representation.

@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a heading node in Markdown.
     /// </summary>
-    public class HeadingNode : MarkdownNode
+    /// <param name="content">The content of the heading node.</param>
+    public class HeadingNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the heading node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HeadingNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the heading node.</param>
-        public HeadingNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the heading node to its HTML representation.

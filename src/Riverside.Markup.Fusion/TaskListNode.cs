@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a task list node in Markdown.
     /// </summary>
-    public class TaskListNode : MarkdownNode
+    /// <param name="content">The content of the task list node.</param>
+    public class TaskListNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the task list node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TaskListNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the task list node.</param>
-        public TaskListNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the task list node to its HTML representation.

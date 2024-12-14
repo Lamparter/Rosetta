@@ -8,18 +8,13 @@ namespace Riverside.Markup.Fusion
     /// <summary>
     /// Represents a link node in Markdown.
     /// </summary>
-    public class LinkNode : MarkdownNode
+    /// <param name="content">The content of the link node.</param>
+    public class LinkNode(string content) : MarkdownNode
     {
         /// <summary>
         /// Gets the content of the link node.
         /// </summary>
-        public string Content { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LinkNode"/> class with the specified content.
-        /// </summary>
-        /// <param name="content">The content of the link node.</param>
-        public LinkNode(string content) => Content = content;
+        public string Content { get; } = content;
 
         /// <summary>
         /// Converts the link node to its HTML representation.
