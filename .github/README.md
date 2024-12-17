@@ -19,7 +19,8 @@ Its base is in XML with a custom namespace schema that allows for developing bas
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the following individual components:
     - .NET SDK
-- Git for Windows
+    - Windows App SDK development workload (if on Windows)
+- Git
 
 #### 2. Clone the repository
 
