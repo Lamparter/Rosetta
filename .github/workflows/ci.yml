@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
@@ -18,7 +18,7 @@ jobs:
           - Riverside.Markup.CompilerServices
           - Riverside.Markup.InteropServices
           # Add more projects here as needed
-        #os: [windows-latest, ubuntu-latest]
+        os: [windows-latest, ubuntu-latest]
 
     outputs:
       normalized_name: ${{ steps.normalize_name.outputs.normalized_name }}
