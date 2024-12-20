@@ -38,16 +38,8 @@ jobs:
       - name: Build project
         run: dotnet build src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-restore
 
-      - name: Build project (Windows)
-        #if: matrix.os == 'windows-latest'
-        run: dotnet build src/Riverside.Markup.Controls/Riverside.Markup.Controls.csproj --configuration Release --no-restore
-
       - name: Pack project
         run: dotnet pack src/${{ matrix.project }}/${{ matrix.project }}.csproj --configuration Release --no-build -o ./output
-
-      - name: Pack project (Windows)
-        #if: matrix.os == 'windows-latest'
-        run: dotnet pack src/Riverside.Markup.Controls/Riverside.Markup.Controls.csproj --configuration Release --no-build -o ./output
 
       - name: Normalize project name
         id: normalize_name
