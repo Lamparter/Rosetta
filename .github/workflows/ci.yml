@@ -46,3 +46,9 @@ jobs:
         with:
           name: Packages (${{ matrix.project }})
           path: ./output/*.nupkg
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Symbols (${{ matrix.project }})
+          path: ./output/*.snupkg
