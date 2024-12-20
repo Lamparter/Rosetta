@@ -44,11 +44,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Packages (${{ matrix.project }})
+          name: Packages (${{ matrix.project }}, ${{ matrix.os }})
           path: ./output/*.nupkg
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Symbols (${{ matrix.project }})
+          name: Symbols (${{ matrix.project }}, ${{ matrix.os }})
           path: ./output/*.snupkg
